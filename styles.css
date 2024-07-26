@@ -1,8 +1,15 @@
+*{
+    box-sizing: border-box;
+
+}
+
 :root {
     --white: white;
     --black: black;
 }
-
+div{
+    display: block;
+}
 .w-layout-grid {
     grid-row-gap: 16px;
     grid-column-gap: 16px;
@@ -13,9 +20,10 @@
 
 body {
     color: #1a1b1f;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 400; line-height: 28px;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 h1 {
@@ -29,7 +37,8 @@ h2 {
 }
 
 h3 {
-    margin-top: 10px; margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 30px;
     font-weight: 400;
     line-height: 46px;
@@ -58,14 +67,15 @@ P {
 }
 
 a {
-    color: #1a1b1f;
+    color: #999dab;
     text-decoration: underline; 
-    transition: opacity .25;
+    transition: opacity .36s;
     display: block;
 }
 
 a:hover {
     color: #32343a;
+    opacity: 0.81;
 }
 
 a:active { 
@@ -96,103 +106,169 @@ label {
     line-height: 20px;
 }
 
-blockquote{
-    border-left: 5px solid #e2e2e2;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 15px 30px;
-    font-size: 20px;
-    line-height: 34px;
-}
 
-figure{
-    margin-top: 25px;
-    padding-bottom: 20px;
-}
 
-figcaption{
-    opacity: .6;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 14px;
-    line-height: 26px;
+.intro-section{
+    margin: auto 30px;
 }
-
-.heading-jumbo-small{
+.intro-section .intro-wrap{
+    margin: 100px auto;
+    width: 70%;
+}
+.name-text {
+    background-image: url('profileImage1.jpg');
+    background-size: cover;
+    background-position: 0 86%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: content-box;
+    text-transform: uppercase;
+    overflow-wrap: normal;
+    font-size: 108px;
+    font-weight: 500;
+    line-height: 180px;
+    position: static;
+    width: 100%;
+    color: rgb(233, 233, 233);
+  }
+.container{
+    width: 100%;
+    max-height: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading-jumbo{
+    font-family: 'Montserrat', sans-serif;
     text-transform: none;
     margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 36px;
-    font-weight: 400;
-    line-height:  50px;
-}
-.styleguide-block {
-    text-align: left;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    display: block;
-}
-
-.heading-jumbo-tiny {
-    text-transform: uppercase;
-    margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-}
-.rich-text {
-    width: 70%;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-  
-.rich-text p {
-    opacity: .6;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-  
-.container {
-    width: 100%;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 54px;
+    line-height: 80px;
 }
 
-.styleguide-content-wrap {
-    text-align: center;
-  }
-  
-.paragraph-small {
-    font-size: 14px;
-    line-height: 26px;
+.project-section{
+    display: grid;
+    gap: 30px;
+    margin: auto 30px;
 }
-  
-.styleguide-header-wrap {
-    color: #fff;
-    background-color: #1a1b1f;
+.project-section .works{
+    text-align: center;
+}
+
+.works .work-image{
+    text-align: center;
+    background-color: #f4f4f4;
+    background-position: 50%;
+    background-size: cover;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: stretch;
     height: 460px;
-    padding: 30px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    display: flex;
+    max-width: 100%;
+}
+.work-1{
+    background-image: url('adminshub project.png');
+    background-position: 50%;
+    background-size: cover;
+}
+.work-2{
+    background-image: url('snapmusic project.png');
+    background-position: 50%;
+    background-size: cover;
+}
+.work-3{
+    background-image: url('trvlxp project.png');
+    background-position: 50%;
+    background-size: cover;
+}
+.work-4{
+    background-image: url('cyber gaming project.png');
+    background-position: 50%;
+    background-size: cover;
+}
+.work-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
     display: flex;
 }
+.works .project-name-link{
+    margin-bottom: 5px;
+    color: #32343a;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    text-decoration: none;
+}
+.paragraph-light{
+ opacity: .6;
+}
+#work-1{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+#work-2{
+    grid-column: 3;
+}
+#work-3{
+    grid-column: 1;
+}
+#work-4{
+    grid-column: 2 / span 2;
+    grid-row: 2;
+}
 
-.styleguide-button-wrap{
+.experience-container{
+    width: 80%;
+    max-width: 1140px;
+    margin: 140px auto 180px auto;
+}
+.experience-container .carrer-headline-wrap{
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.carrer-headline-wrap h2{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+.carrer-headline-wrap p{
+    margin-bottom: 10px;
+}
+.work-experience-flex{
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.work-experience-flex .work-position-wrap{
+    width: fit-content;
 }
 
-.heading-jumbo{
-    
+.position-name-text{
+    text-transform: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
 }
-
-
-
-
-    
+.paragraph-light{
+    opacity: .6;
+}
+.cc-position-name{
+    margin-bottom: 5px;
+}
+.paragraph-tiny.cc-paragraph-tiny-light {
+    opacity: .7;
+}
+.paragraph-tiny {
+    font-size: 12px;
+    line-height: 20px;
+}
